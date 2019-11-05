@@ -2,7 +2,7 @@ import Foundation
 
 public class PreferencesController: NSObject {
     
-    static let shared = PreferencesController()
+    public static let shared = PreferencesController()
     
     internal let _userDefault: UserDefaults
     
