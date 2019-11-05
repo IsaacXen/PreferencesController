@@ -2,9 +2,9 @@ import Foundation
 
 public struct Preference<Value> {
     
-    let key: String
+    public let key: String
     
-    let defaultValue: Value
+    public let defaultValue: Value
     
     internal let _readOnly: Bool
     
@@ -14,11 +14,11 @@ public struct Preference<Value> {
         self._readOnly = readOnly
     }
     
-    static func readOnly<Value>(_ key: String, defaultValue: Value) -> Preference<Value> where Value: PropertyListRepresentable {
+    public static func readOnly<Value>(_ key: String, defaultValue: Value) -> Preference<Value> where Value: PropertyListRepresentable {
         Preference<Value>(key, defaultValue, readOnly: true)
     }
     
-    static func readWrite<Value>(_ key: String, defaultValue: Value) -> Preference<Value> where Value: PropertyListRepresentable {
+    public static func readWrite<Value>(_ key: String, defaultValue: Value) -> Preference<Value> where Value: PropertyListRepresentable {
         Preference<Value>(key, defaultValue, readOnly: false)
     }
     
