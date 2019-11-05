@@ -28,4 +28,3 @@ struct MyCustomValue: PropertyListRepresentable {
 - Dictionary
 
 ### Responding to Preferences Changes
-
