@@ -1,8 +1,11 @@
-//
-//  File.swift
-//  
-//
-//  Created by Isaac Chen on 2019/11/5.
-//
-
 import Foundation
+
+extension Date: PropertyListRepresentable {
+    public var propertyListEncoded: Any {
+        self
+    }
+    
+    public static func decode(fromPropertyList encoded: Any) -> Date? {
+        encoded as? Date
+    }
+}
